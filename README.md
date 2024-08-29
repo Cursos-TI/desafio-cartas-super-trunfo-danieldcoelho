@@ -1,68 +1,83 @@
+# ⚠️ Importante!!!
+Criamos um novo link para o primeiro desafio porque o link original apresentou problemas. Quem já completou o desafio pode continuar usando o link original para enviar seu repositório. Se você ainda não começou o desafio, utilize o novo link.
 
-# Desafio cartas super-trunfo danieldcoelho
+# Desafio Super Trunfo - Países - Cadastro das Cartas
 
-# jogo Super Trunfo com o tema países
+Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam as propriedades das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países," onde você comparará as propriedades das cidades.
 
-Este projeto é um jogo de cartas em C que permite cadastrar informações sobre cidades, comparando-as com base em critérios como densidade populacional, PIB per capita, área e número de pontos turísticos. O objetivo é determinar qual cidade possui as melhores características com base nos critérios estabelecidos.
+A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
 
-## Funcionalidades
+O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior. Você deve escolher qual desafio quer realizar.
 
-O sistema permitirá ao usuário comparar cartas de cidades com base nas propriedades inseridas manualmente e nas propriedades calculadas, como densidade populacional e PIB per capita. Utilizando operadores relacionais, o sistema determinará a carta vencedora.
+### 🚨 Atenção: 
+O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções scanf para ler os dados e printf para exibi-los.
 
-## Estrutura da Carta
+## 🎮 Nível Novato
 
-Cada carta contém as seguintes informações:
+No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades. 
 
-- **Estado**: Um caractere representando o estado.
-- **Código**: Código gerado automaticamente para identificar a carta.
-- **Nome da Cidade**: Nome da cidade.
-- **População**: População da cidade.
-- **Área**: Área da cidade em km².
-- **PIB**: Produto Interno Bruto em bilhões de reais.
-- **Número de Pontos Turísticos**: Quantidade de pontos turísticos na cidade.
-- **Densidade Populacional**: Calculada automaticamente (população/área).
-- **PIB per Capita**: Calculado automaticamente (PIB/população).
-- **Super Poder**: Um valor calculado com base em todos os atributos da cidade.
+Cada país será dividido em oito estados, identificados pelas letras de A a H. Cada estado terá quatro cidades, numeradas de 1 a 4. A combinação da letra do estado e o número da cidade define o código da carta (por exemplo, A01, A02, B01, B02).
 
-## Funções Principais
+### 🚩 Objetivo:
+- Criar cartas representando cidades, contendo as seguintes propriedades:
+  - **População**
+  - **Área**
+  - **PIB**
+  - **Número de pontos turísticos**
+  
+### ⚙️ Funcionalidades do Sistema:
+- O sistema permitirá ao usuário cadastrar cartas de cidades, inserindo manualmente os dados via terminal de comando.
+- Após o cadastro, o sistema exibirá os dados de cada cidade de forma clara e organizada.
 
-- `clearVars()`: Inicializa os valores da carta.
-- `densiPopula()`: Calcula a densidade populacional.
-- `PIBpercapita()`: Calcula o PIB per capita.
-- `calcularSuperPoder()`: Calcula o "super poder" da carta com base nos atributos.
-- `gerarCodCidades()`: Gera o código da cidade com base no estado.
-- `cadastrarCarta()`: Lê os dados da cidade e preenche a carta.
-- `exibirCarta()`: Exibe os dados da carta cadastrada.
-- `compararCartas()`: Compara duas cartas e determina a vencedora.
-
-## Como Executar
-
-1. Compile o código com o GCC:
-
-   ```bash
-   gcc -o jogo_de_cartas jogo_de_cartas.c
-   ```
-
-2. Execute o programa:
-
-   ```bash
-   ./jogo_de_cartas
-   ```
-
-## Exemplo de Uso
-
-Após a execução, o programa solicitará a entrada dos dados de duas cartas. Para cada carta, insira o estado, nome da cidade, população apenas a casa do milhão, área em Km², PIB apenas a casa do bilhão, e o número de pontos turísticos. Ao final, o programa exibirá as características de cada cidade e determinará qual carta é a vencedora.
-
-## Requisitos
-
-- GCC ou outro compilador C compatível.
-
-## Contribuições
-
-
-## Licença
-
-Este projeto é de código aberto e está licenciado sob a [MIT License](LICENSE).
+### 📥 Entrada e 📤 Saída de Dados:
+- O usuário insere os dados de cada carta interativamente.
+- Após o cadastro, os dados são exibidos com todas as propriedades da cidade, uma por linha.
 
 ---
 
+## 🛡️ Nível Aventureiro
+
+No nível Aventureiro, você expandirá o sistema para incluir propriedades calculadas, permitindo uma análise mais detalhada das cartas.
+
+### 🆕 Diferença em relação ao Nível Novato:
+- **Novas Propriedades Calculadas:**
+  - **Densidade Populacional:** População dividida pela área da cidade.
+  - **PIB per Capita:** PIB total dividido pela população.
+
+### ⚙️ Funcionalidades do Sistema:
+- O sistema agora calculará automaticamente a Densidade Populacional e o PIB per Capita com base nos dados inseridos.
+- Essas novas propriedades serão adicionadas às informações exibidas para cada cidade.
+
+### 📥 Entrada e 📤 Saída de Dados:
+- O usuário continua inserindo os dados de cada carta interativamente.
+- O sistema exibirá os dados, incluindo as novas propriedades calculadas, de forma clara e organizada.
+
+---
+
+## 🏆 Nível Mestre
+
+No nível Mestre, você implementará comparações entre as cartas, utilizando operadores relacionais e manipulando grandes números com precisão.
+
+### 🆕 Diferença em relação ao Nível Aventureiro:
+- **Comparação de Cartas:**
+  - O sistema permitirá ao usuário comparar duas cartas com base nas propriedades inseridas e calculadas.
+  - Cada carta terá um "Super Poder", que é a soma de todas as propriedades.
+  
+### ⚙️ Funcionalidades do Sistema:
+- O sistema utilizará operadores relacionais para determinar a carta vencedora com base nas propriedades comparadas.
+- A comparação considerará:
+  - **Densidade Populacional:** Vence a carta com menor valor.
+  - **Outras Propriedades:** Vence a carta com maior valor.
+- O resultado das comparações será exibido claramente para cada propriedade.
+
+### 📥 Entrada e 📤 Saída de Dados:
+- O usuário insere as cartas a serem comparadas.
+- O sistema exibe os resultados das comparações, indicando a carta vencedora para cada propriedade.
+
+---
+
+Ao concluir todos os níveis, você terá criado um sistema incial para o jogo Super Trunfo, com funcionalidades de cadastro, cálculo e comparação de propriedades. 
+
+Boa sorte e divirta-se programando!
+
+Equipe de Ensino - MateCheck
